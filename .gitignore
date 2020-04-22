@@ -1,0 +1,6 @@
+# ignored cloned directory
+/Vulkan-Docs/
+
+# swap files from vim
+*.swp
+*.swo
