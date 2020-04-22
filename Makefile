@@ -1,7 +1,16 @@
 .PHONY: all clean install purge
 
+# forward target API version to internal script
+SPECV=
+
 all:
-	@./build.sh
+	@if [ -z $(SPECV) ]; then \
+		echo "Target build is latest spec."; \
+		./build.sh; \
+	else \
+		echo "Target build spec is $(SPECV)"; \
+		./build.sh $(SPECV); \
+	fi;
 
 clean:
 	# note: execute bash script in Makefile (remember to use \ and ; at the end)
