@@ -50,7 +50,7 @@ The script will perform the following operations
 
 # Credits
 
-Ryp for his inspiring [PR](https://github.com/KhronosGroup/Vulkan-Docs/pull/839/files) to make manpages generation possible.
+Thanks to Ryp for his inspiring [PR](https://github.com/KhronosGroup/Vulkan-Docs/pull/839/files) to make manpages generation possible.
 The core logic to generate manpage of this project is based on top of that.
 
 # License
