@@ -1,4 +1,4 @@
-.PHONY: all
+.PHONY: all clean install purge
 
 all:
 	@./build.sh
