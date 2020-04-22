@@ -1,5 +1,6 @@
 #!/bin/bash
 # Script to pull upstream KhronosGroup/Vulkan-Docs
+# This script is intended to be executed from parent Makefile
 
 ### Section of variable declarations ###
 
@@ -32,37 +33,36 @@ fi
 
 cd $repo_dir
 
+git checkout master
+git reset --hard
+git clean -fx
+git pull origin master
+
 # install all required nodejs packages locally (as per package.json if exists)
 # certain release version especially 1.2.138 includes nodejs as part of dependency, and
 # users need to install a few packages as required per package.json states
 if [ -f "package.json" ]; then
     npm install
-    if [ $? -ne 0]; then
+    if [ $? -ne 0 ]; then
         echo "Error from installing required NodeJS packages"
         exit 1
     fi
 fi
-git checkout master
-git reset --hard
-git clean -fd
-git pull origin master
 
 # get the most recent tag release
 if [ $is_need_fetch_latest_tag_release -eq 1 ]; then
     target_api_version_release=`git tag --list --sort=-committerdate | head -n1`
+else
+    # set from forwarded parameter from parent Makefile
+    target_api_version_release=$1
 fi
 
 # check if such tag release ever exists
 git checkout $target_api_version_release
 if [ $? -ne 0 -a $is_need_fetch_latest_tag_release -eq 1 ]; then
     echo "No such release for '$target_api_version_release'!"
-    echo "Cloned repo is possibly corrupt."
+    echo "Cloned repo is possibly corrupted."
     echo "Please remove cloned repo directory, then try again."
-    exit 1
-elif [ $? -ne 0 -a $is_need_fetch_latest_tag_release -eq 0 ]; then
-    echo "No such release for '$target_api_version_release'!"
-    echo "Please make sure input target API version to build is correct, and available."
-    echo "[Note]: Target API version is in format v<major-version>.<minor-version>.<patch-version>"
     exit 1
 fi
 
@@ -74,8 +74,11 @@ make clean_onlymanpages
 
 # build only manpages
 make -j4 onlymanpages
+
+## FIXME: a few files will be linted with result of errors, for now we just let it complete. This
+## applies for version 1.1.x.
 if [ $? -ne 0 ]; then
-    echo "Error in making manpages!"
+    echo "Error in making manpages. Some files are failed in building!"
     exit 1
 fi
 
