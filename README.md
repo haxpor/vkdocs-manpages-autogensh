@@ -36,13 +36,14 @@ This will install all generated manpages from `Vulkan-Docs/out/man/` to your `/u
 
 `make clean`
 
-This will remove all generated files resulting from `make`.
+This will remove all generated files resulting from `make`. This will only remove generated files inside Vulkan-Docs directory.
+It doesn't have any effect to your installed manpages on your system.
 
 ## Purge
 
 `make purge`
 
-This will remove entire directory `Vulkan-Docs`.
+This will remove entire directory `Vulkan-Docs`. This is equivalent of manually removing such directory yourself.
 
 # Behind the scene
 
