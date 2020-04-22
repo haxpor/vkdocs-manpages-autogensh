@@ -4,6 +4,9 @@ Auto-generator Vulkan-Docs manpages
 Tested mainly on Ubuntu but should works the same on other distros.
 Not tested on macOS, and Windows. It would need slightly modifications on top of parameters supplied to each command as it might have different variants. PRs welcome.
 
+[Vulkan-Docs](https://github.com/KhronosGroup/Vulkan-Docs) has man source files which can be converted into manpages with a few clean-up/reformat ontop but
+their decision doesn't include maintaining of manpages generation code in the repo. So in short, it is possible to do it and this project will serve that purpose.
+
 # Example
 
 Notice those <u>normative</u> keywords, and **inline code** format.
