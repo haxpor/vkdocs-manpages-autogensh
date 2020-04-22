@@ -23,7 +23,7 @@ Notice those <u>normative</u> keywords, and **inline code** format.
 ## Build
 
 * `make` - Build lastest spec release version
-* *(working-in-progress)* - Build a custom spec release version
+* `make SPECV=v1.2.138` - Build a custom spec release version. `SPECV` shorts for spec version. You can get list of spec versions [here](https://github.com/KhronosGroup/Vulkan-Docs/releases). **Note:** For now, v1.2.131 to v1.2.138 are built without errors.
 
 
 ## Install
