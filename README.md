@@ -4,6 +4,12 @@ Auto-generator Vulkan-Docs manpages
 Tested mainly on Ubuntu but should works the same on other distros.
 Not tested on macOS, and Windows. It would need slightly modifications on top of parameters supplied to each command as it might have different variants. PRs welcome.
 
+# Example
+
+Notice those <u>normative</u> keywords, and **inline code** format.
+
+![example man page](example.png)
+
 # Dependency
 
 * NodeJS (only if users target to build manpages against `Vulkan-Docs` API version `v1.2.137` or newer)
