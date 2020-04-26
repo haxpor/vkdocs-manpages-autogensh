@@ -4,8 +4,7 @@
 
 ### Section of variable declarations ###
 
-# this requires that user has setup SSH key on Github
-git_upstream_repo=git@github.com:KhronosGroup/Vulkan-Docs.git
+git_upstream_repo=https://github.com/KhronosGroup/Vulkan-Docs.git
 repo_dir=Vulkan-Docs
 target_api_version_release=
 is_need_fetch_latest_tag_release=0
