@@ -35,6 +35,7 @@ cd $repo_dir
 git reset --hard
 git clean -fx
 git checkout master
+git fetch --all     # make sure to get all release branches
 git pull origin master
 
 # install all required nodejs packages locally (as per package.json if exists)
