@@ -86,5 +86,5 @@ ls out/man | grep -e '[vV][kK].*.3' | xargs -I{} sed -i -e 's/<code>/\\fB/g' -e 
 ls out/man | grep -e 'PFN.*.3' | xargs -I{} sed -i -e 's/<code>/\\fB/g' -e 's|</code>|\\fR|g' -e 's|<strong\sclass="purple">|\\fI|g' -e 's|</strong>|\\fR|g' out/man/{};
 
 # show stats result of number of manpages generated
-total_files=$(($(ls out/man | grep -e '[vV][kK].*.3' | wc -l) + $(ls out/man | grep -e 'PFN.*.3' | wc -l)))
+total_files=$(($(ls out/man | grep -e '^[vV][kK].*.3' | wc -l) + $(ls out/man | grep -e '^PFN.*.3' | wc -l)))
 echo "Generated in total $total_files manpages"
