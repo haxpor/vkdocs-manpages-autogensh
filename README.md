@@ -7,6 +7,10 @@ Not tested on macOS, and Windows. It would need slightly modifications on top of
 [Vulkan-Docs](https://github.com/KhronosGroup/Vulkan-Docs) has man source files which can be converted into manpages with a few clean-up/reformat ontop but
 their decision doesn't include maintaining of manpages generation code in the repo. So in short, it is possible to do it and this project will serve that purpose.
 
+# Pre-Built Manpages for Downloads
+
+In case you don't have time or don't want to build it yourself, head over to this repository's [release](https://github.com/haxpor/Vulkan-Docs/releases) section, then you can download manpages as zip file there. Extract it to your system proper location then you're ready to use.
+
 # Example
 
 Notice those <u>normative</u> keywords, and **inline code** format.
