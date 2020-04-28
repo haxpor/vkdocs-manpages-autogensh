@@ -9,7 +9,7 @@ their decision doesn't include maintaining of manpages generation code in the re
 
 # Pre-Built Manpages for Downloads
 
-In case you don't have time or don't want to build it yourself, head over to this repository's [release](https://github.com/haxpor/Vulkan-Docs/releases) section, then you can download manpages as zip file there. Extract it to your system proper location then you're ready to use.
+In case you don't have time or don't want to build it yourself, head over to downstream Vulkan-Docs repository's [release](https://github.com/haxpor/Vulkan-Docs/releases) section, then you can download manpages as zip file there. Extract it to your system proper location then you're ready to use.
 
 # Example
 
