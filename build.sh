@@ -32,9 +32,9 @@ fi
 
 cd $repo_dir
 
-git checkout master
 git reset --hard
 git clean -fx
+git checkout master
 git pull origin master
 
 # install all required nodejs packages locally (as per package.json if exists)
